@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160709 13:31:33.346" generator="Robot 2.9.1 (Python 2.7.10 on darwin)">
+<suite source="/Users/vanessaedirisuriya/PycharmProjects/demoApp1/test_app.robot" id="s1" name="Test App">
+<kw type="setup" name="Start Appium" library="setup_appium">
+<status status="PASS" endtime="20160709 13:31:34.058" starttime="20160709 13:31:34.038"></status>
+</kw>
+<test id="s1-t1" name="Launch test app">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20160709 13:31:39.086" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20160709 13:31:39.087" starttime="20160709 13:31:34.080"></status>
+</kw>
+<kw name="launch app" library="keyword_ios">
+<kw name="Setup Appium" library="setup_appium">
+<arguments>
+<arg>${APP}</arg>
+<arg>iOS</arg>
+</arguments>
+<assign>
+<var>${driver}</var>
+</assign>
+<msg timestamp="20160709 13:31:40.701" level="FAIL">WebDriverException: Message: A new session could not be created. (Original error: Could not initialize ideviceinstaller; make sure it is installed and works on your system)
+</msg>
+<status status="FAIL" endtime="20160709 13:31:40.701" starttime="20160709 13:31:39.088"></status>
+</kw>
+<status status="FAIL" endtime="20160709 13:31:40.702" starttime="20160709 13:31:39.088"></status>
+</kw>
+<tags>
+<tag>ios</tag>
+</tags>
+<status status="FAIL" endtime="20160709 13:31:40.702" critical="yes" starttime="20160709 13:31:34.065">WebDriverException: Message: A new session could not be created. (Original error: Could not initialize ideviceinstaller; make sure it is installed and works on your system)
+</status>
+</test>
+<kw type="teardown" name="Stop Appium" library="setup_appium">
+<status status="PASS" endtime="20160709 13:31:40.705" starttime="20160709 13:31:40.705"></status>
+</kw>
+<doc>Suite description for ios app</doc>
+<status status="FAIL" endtime="20160709 13:31:40.705" starttime="20160709 13:31:33.351"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">ios</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Test App" pass="0">Test App</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
